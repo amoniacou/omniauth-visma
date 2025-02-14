@@ -1,25 +1,25 @@
 # -*- encoding: utf-8 -*-
 require File.expand_path('../lib/omniauth-visma/version', __FILE__)
 
-Gem::Specification.new do |gem|
-  gem.authors       = ["Espen Antonsen"]
-  gem.email         = ["espen@inspired.no"]
-  gem.description   = %q{OmniAuth strategy for Visma eAccounting.}
-  gem.summary       = %q{OmniAuth strategy for Visma eAccounting.}
-  gem.homepage      = "https://github.com/espen/omniauth-visma"
-  gem.license = 'MIT'
+Gem::Specification.new do |spec|
+  spec.name          = "omniauth-visma"
+  spec.version       = OmniAuth::Visma::VERSION
+  spec.authors       = ["Espen Antonsen", "Amoniac OU"]
+  spec.email         = ["espen@inspired.no", "oleksandr@amoniac.eu"]
+  spec.description   = %q{OmniAuth strategy for Visma eAccounting.}
+  spec.summary       = %q{OmniAuth strategy for Visma eAccounting.}
+  spec.homepage      = "https://github.com/amoniacou/omniauth-visma"
+  spec.license       = "MIT"
 
-  gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  gem.files         = `git ls-files`.split("\n")
-  gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  gem.name          = "omniauth-visma"
-  gem.require_paths = ["lib"]
-  gem.version       = OmniAuth::Visma::VERSION
+  spec.files         = `git ls-files`.split($/)
+  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.require_paths = ["lib"]
 
-  gem.add_dependency 'omniauth', '~> 1.0'
-  gem.add_dependency 'omniauth-oauth2', '~> 1.0'
-  gem.add_development_dependency 'rspec'
-  gem.add_development_dependency 'rack-test'
-  gem.add_development_dependency 'webmock'
-  gem.add_development_dependency "rake"
+  spec.add_runtime_dependency 'omniauth-oauth2', ">= 1.7"
+  spec.add_development_dependency "bundler"
+  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec"
+  spec.add_development_dependency "rack-test"
+  spec.add_development_dependency "webmock"
 end
