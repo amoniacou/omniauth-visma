@@ -1,4 +1,4 @@
-# OmniAuth Visma
+# OmniAuth VismaEaccounting
 
 This gem contains the unofficial Visma eAccounting strategy for OmniAuth.
 
@@ -6,13 +6,13 @@ See the [authorization documentation](https://developer.vismaonline.com/#eAccoun
 
 For more information about the API see https://developer.vismaonline.com/.
 
-To easily use the API from Ruby see [VismaEaccounting](https://github.com/espen/visma_eaccounting).
-
 ## Basic Usage
 
-    use OmniAuth::Builder do
-      provider "visma", ENV['VISMA_CLIENT_ID'], ENV['VISMA_CLIENT_SECRET'], scope: 'offline_access ea:api'
-    end
+```ruby
+use OmniAuth::Builder do
+  provider "vismaeaccounting", ENV['VISMA_CLIENT_ID'], ENV['VISMA_CLIENT_SECRET'], scope: 'offline_access ea:api'
+end
+```
 
 ## Refreshing the access token
 
@@ -22,7 +22,7 @@ Example:
 
 ```ruby
 if Time.at( visma_access_token_expires_at ).past?
-  oauth = OmniAuth::Strategies::Visma.new(nil, {
+  oauth = OmniAuth::Strategies::VismaEaccounting.new(nil, {
     client_id: ENV['VISMA_CLIENT_ID'],
     client_secret: ENV['VISMA_CLIENT_SECRET']
   }
@@ -44,3 +44,4 @@ Based on [omniauth-37signals](https://github.com/tallgreentree/omniauth-37signal
 ## License
 
 Copyright (c) 2017 by Espen Antonsen. [MIT License](LICENSE)
+Copyright (c) 2025 by Amoniac OU. [MIT License](LICENSE)
