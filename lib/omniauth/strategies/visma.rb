@@ -10,6 +10,8 @@ module OmniAuth
         token_url: "https://identity.vismaonline.com/connect/token"
       }
 
+      option :authorize_options, %i[prompt acr_values state redirect_uri scope]
+
       info do
         {
           :name => raw_info['Name'],
