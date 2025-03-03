@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
-require File.expand_path('lib/omniauth-visma_eaccounting/version', __dir__)
+require File.expand_path('lib/omniauth-vismaeaccounting/version', __dir__)
 
 Gem::Specification.new do |spec|
-  spec.name          = 'omniauth-visma-eaccounting'
+  spec.name          = 'omniauth-vismaeaccounting'
   spec.version       = OmniAuth::VismaEaccounting::VERSION
   spec.authors       = ['Espen Antonsen', 'Amoniac OU']
   spec.email         = ['espen@inspired.no', 'oleksandr@amoniac.eu']
   spec.description   = 'OmniAuth strategy for Visma eAccounting.'
   spec.summary       = 'OmniAuth strategy for Visma eAccounting.'
-  spec.homepage      = 'https://github.com/amoniacou/omniauth-visma-eaccounting'
+  spec.homepage      = 'https://github.com/amoniacou/omniauth-vismaeaccounting'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
