@@ -4,7 +4,7 @@ require File.expand_path('lib/omniauth-vismaeaccounting/version', __dir__)
 
 Gem::Specification.new do |spec|
   spec.name          = 'omniauth-vismaeaccounting'
-  spec.version       = OmniAuth::VismaEaccounting::VERSION
+  spec.version       = OmniAuth::Vismaeaccounting::VERSION
   spec.authors       = ['Espen Antonsen', 'Amoniac OU']
   spec.email         = ['espen@inspired.no', 'oleksandr@amoniac.eu']
   spec.description   = 'OmniAuth strategy for Visma eAccounting.'

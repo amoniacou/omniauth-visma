@@ -4,7 +4,7 @@ require 'omniauth-oauth2'
 
 module OmniAuth
   module Strategies
-    class VismaEaccounting < OmniAuth::Strategies::OAuth2
+    class Vismaeaccounting < OmniAuth::Strategies::OAuth2
       option :name, 'vismaeaccounting'
       option :client_options, {
         site: 'https://eaccountingapi.vismaonline.com/v2/',

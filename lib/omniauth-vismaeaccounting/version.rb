@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module OmniAuth
-  module VismaEaccounting
-    VERSION = '0.2.0'
+  module Vismaeaccounting
+    VERSION = '0.3.0'
   end
 end

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe OmniAuth::Strategies::VismaEaccounting do
+describe OmniAuth::Strategies::Vismaeaccounting do
   subject do
     strategy = described_class.new(nil, options)
     allow(strategy).to receive(:session).and_return({})
